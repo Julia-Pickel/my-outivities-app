@@ -38,7 +38,7 @@ export default function MapOverview({ outivities }) {
           position={[outivity.lat, outivity.lng]}
         >
           <Popup>
-            <StyledLink href={`//${outivity._id}`}>
+            <StyledLink href={`/${outivity._id}`}>
               <h2>{outivity.title}</h2>
             </StyledLink>
             <StyledInfo>in {outivity.area}</StyledInfo>
