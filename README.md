@@ -47,3 +47,4 @@ To do so create `.env.local` file in the project's root.
 Check the `env.example` file, copy paste the variables into the `.env.local` and complete it with the corresponding values.
 
 Run `npm run dev` to start a development server and open the displayed URL in a browser.
+# my-outivities
