@@ -42,5 +42,11 @@
   "description": "Next.js (incl. Styled Components and Jest)",
   "nf": {
     "template": "next"
-  }
+  },
+  "main": "jest.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "",
+  "license": "ISC"
 }
