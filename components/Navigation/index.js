@@ -2,7 +2,6 @@ import Link from "next/link";
 import styled from "styled-components";
 import Icon from "../Icons";
 import { useRouter } from "next/router";
-import Login from "../Login/Login";
 
 export default function Navigation() {
   const router = useRouter();

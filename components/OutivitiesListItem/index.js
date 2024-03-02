@@ -54,7 +54,8 @@ const StyledOutivityCard = styled.li`
   max-width: 640px;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: var(--neutral-color) 0px 2px 1px, var(--neutral-color) 0px 4px 2px,
+  box-shadow: 
+    var(--neutral-color) 0px 2px 1px, var(--neutral-color) 0px 4px 2px,
     var(--neutral-color) 0px 8px 4px, var(--neutral-color) 0px 16px 8px,
     var(--neutral-color) 0px 32px 16px;
   margin: 20px;

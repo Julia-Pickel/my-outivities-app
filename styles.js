@@ -37,7 +37,7 @@ export default createGlobalStyle`
 
   body {
     font-family: ${poppins.style.fontFamily};
-    margin: 0px 0px 70px 0px;
+    margin: 0px 0px 50px 0px;
   }
 
   main {
