@@ -80,7 +80,8 @@ export default function OutivityDetail({
             </StyledMapInfo>
           )}
           <StyledOutivityDescription>
-            <strong>Description: </strong> {outivity.description}
+            <strong>Description: </strong> 
+            <StyledDescriptionText>{outivity.description}</StyledDescriptionText>
           </StyledOutivityDescription>
           <StyledDeleteButton type="button" onClick={confirmDelete}>
             ✗ delete
@@ -175,4 +176,8 @@ const StyledOutivityLocation = styled.p`
 
 const StyledOutivityDescription = styled.p`
   margin: 20px 0 20px 0;
+`;
+
+const StyledDescriptionText = styled.div`
+text-align: justify;
 `;
