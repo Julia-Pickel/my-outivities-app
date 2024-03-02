@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import Icon from "../Icons";
 import { useRouter } from "next/router";
+import Login from "../Login/Login";
 
 export default function Navigation() {
   const router = useRouter();
@@ -16,76 +17,98 @@ export default function Navigation() {
 
   return (
     <StyledNavigation>
-      <StyledSpan>
         <StyledList>
           <li>
-            <StyledLink href="/" onClick={handleHomeClick}>
+            <StyledLink href="/" onClick={handleHomeClick} $currentPage={
+                router.pathname === "/"}>
               <Icon
                 variant={"home"}
-                size={54}
+                size={30}
+                strokeWidth={0.1}
                 color={
                   router.pathname === "/"
                     ? "var(--third-color)"
-                    : "var(--neutral-color)"
+                    : "var(--primary-color)"
                 }
               />
+              <StyledIconName color={router.pathname === "/" ? "var(--third-color)" : "var(--primary-color)"}>Explore</StyledIconName>
             </StyledLink>
-          </li>
-          <li>
-            <StyledLink href="/create">
-              <Icon
-                variant={"plus"}
-                size={50}
-                color={
-                  router.pathname === "/create"
-                    ? "var(--third-color)"
-                    : "var(--neutral-color)"
-                }
-              />
-            </StyledLink>
-          </li>
-          <li>
+            </li>
+            <li>
             <StyledLink href="/favoriteList">
               <Icon
                 variant={"noFavorite"}
-                size={45}
+                size={30}
+                strokeWidth={0.1}
                 color={
                   router.pathname === "/favoriteList"
                     ? "var(--third-color)"
-                    : "var(--neutral-color)"
+                    : "var(--primary-color)"
                 }
               />
+              <StyledIconName color={router.pathname === "/favoriteList" ? "var(--third-color)" : "var(--primary-color)"}>Favorites</StyledIconName>
             </StyledLink>
-          </li>
-          <li>
-            <StyledLink href="/mapOverview">
+            </li>
+            <li>
+            <StyledLink href="/create" $currentPage={
+                router.pathname === "/create"}>
+              <Icon
+                variant={"plus"}
+                size={30}
+                strokeWidth={0.1}
+                color={
+                  router.pathname === "/create"
+                    ? "var(--third-color)"
+                    : "var(--primary-color)"
+                }
+              />
+              <StyledIconName color={router.pathname === "/create" ? "var(--third-color)" : "var(--primary-color)"}>Create</StyledIconName>
+            </StyledLink>
+            </li>
+            <li>
+            <StyledLink href="/mapOverview" >
               <Icon
                 variant={"map"}
-                size={54}
+                size={30}
+                strokeWidth={0.1}
                 color={
                   router.pathname === "/mapOverview"
                     ? "var(--third-color)"
-                    : "var(--neutral-color)"
+                    : "var(--primary-color)"
                 }
-              />
+                />
+            <StyledIconName color={router.pathname === "/mapOverview" ? "var(--third-color)" : "var(--primary-color)"}>Map</StyledIconName>
             </StyledLink>
-          </li>
+            </li>
+            <li>
+            <StyledLink href="/">
+            <Icon
+                variant={"user"}
+                size={30}
+                strokeWidth={0.1}
+                 color={
+                  router.pathname === "/profil"
+                     ? "var(--third-color)"
+                    : "var(--primary-color)"
+                 }
+              />
+              <StyledIconName color={router.pathname === "/login" ? "var(--third-color)" : "var(--primary-color)"}>Profil</StyledIconName>
+      </StyledLink>
+            </li>
         </StyledList>
-      </StyledSpan>
     </StyledNavigation>
   );
 }
 
 const StyledNavigation = styled.nav`
   width: 100%;
-  background-color: var(--primary-color);
-  color: var(--neutral-color);
+  background-color: white;
   position: fixed;
   bottom: 0;
-  height: 70px;
+  height: 50px;
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax (50px, 1fr));
   z-index: 2;
+  border-top: solid 1px var(--neutral-color);
 `;
 
 const StyledList = styled.ul`
@@ -94,16 +117,17 @@ const StyledList = styled.ul`
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 2px;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  align-items: center;
-  width: 50%;
 `;
 
-const StyledSpan = styled.span`
-  font-weight: 200;
-  font-size: 12px;
-`;
+const StyledIconName = styled.div`
+text-decoration: none;
+margin-top: -7px;
+font-weight: 300;
+font-size: 10px;
+color: ${({ color }) => color};
+`
