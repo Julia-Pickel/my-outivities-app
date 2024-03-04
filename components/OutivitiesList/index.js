@@ -24,5 +24,4 @@ export default function OutivitiesList({ outivities }) {
 const StyledOutivityCardContainer = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
 `;
