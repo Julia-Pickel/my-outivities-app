@@ -13,13 +13,13 @@ export const authOptions = {
     CredentialsProvider({
       name: "credentials",
       credentials: {
-        username: { label: "Username", type: "text", placeholder: "username" },
-        password: { label: "Password", type: "password" },
+        username: { label: "Username", type: "text", placeholder: "username1234" },
+        password: { label: "Password", type: "password", placeholder: "password1234" },
       },
       async authorize(credentials) {
         if (
-          credentials.username === "fisch" &&
-          credentials.password === "fisch"
+          credentials.username === "fish" &&
+          credentials.password === "fish"
         ) {
           return {
             name: "Neuer Fisch",

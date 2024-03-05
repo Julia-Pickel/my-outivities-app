@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import Icon from "../Icons";
 import { useRouter } from "next/router";
+import Login from "../Login/Login";
 
 export default function Navigation() {
   const router = useRouter();
@@ -80,24 +81,13 @@ export default function Navigation() {
             </StyledLink>
             </li>
             <li>
-            <StyledLink href="/">
-            <Icon
-                variant={"user"}
-                size={30}
-                strokeWidth={0.1}
-                 color={
-                  router.pathname === "/profil"
-                     ? "var(--third-color)"
-                    : "var(--primary-color)"
-                 }
-              />
-              <StyledIconName color={router.pathname === "/login" ? "var(--third-color)" : "var(--primary-color)"}>Profil</StyledIconName>
-      </StyledLink>
+              <Login />
             </li>
-        </StyledList>
+    </StyledList>
     </StyledNavigation>
-  );
+  )          
 }
+
 
 const StyledNavigation = styled.nav`
   width: 100%;
@@ -129,4 +119,5 @@ margin-top: -7px;
 font-weight: 300;
 font-size: 10px;
 color: ${({ color }) => color};
-`
+`;
+
