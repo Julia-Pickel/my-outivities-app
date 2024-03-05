@@ -11,7 +11,7 @@ In the Outivity app, you can gather and organize outdoor activity ideas, persona
 
 To work locally, please install the dependencies using `npm i` first.
 
-Add local environment variables for Cloudinary, OpenCage and the MongoDB connection string.
+Add local environment variables for Cloudinary, NextAuth, OpenCage and the MongoDB connection string.
 To do so create `.env.local` file in the project's root.
 Check the `env.example` file, copy paste the variables into the `.env.local` and complete it with the corresponding values.
 
