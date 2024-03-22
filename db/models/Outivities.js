@@ -10,6 +10,7 @@ const outivitySchema = new Schema({
   image: { type: String, required: false },
   lat: { type: Number, required: false },
   lng: { type: Number, required: false },
+  author: String,
 });
 
 const Outivity =
