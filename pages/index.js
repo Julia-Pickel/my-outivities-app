@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import Header from "@/components/Header";
 import Head from "next/head";
 import OutivitiesList from "@/components/OutivitiesList";
 import { useState } from "react";
@@ -23,7 +23,7 @@ export default function HomePage() {
         <title>My Outivities</title>
       </Head>
 
-      <StyledTitle>All Outivities</StyledTitle>
+      <Header/>
 
       <main>
         <SearchBar setSearchTerm={setSearchTerm} />
@@ -42,13 +42,3 @@ export default function HomePage() {
     </>
   );
 }
-
-const StyledTitle = styled.h1`
-  display: grid;
-  top: 0;
-  margin: 0;
-  height: 70px;
-  place-content: center;
-  background-color: var(--primary-color);
-  color: var(--neutral-color);
-`;
